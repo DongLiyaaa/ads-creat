@@ -1,0 +1,4 @@
+interface:
+  display_name: "ads-creat"
+  short_description: "Compile Amazon Ads execution tasks"
+  default_prompt: "Use $ads-creat to convert these SP/SB/SD strategy conclusions into machine-executable ad task payloads."

@@ -2,7 +2,7 @@
 
 Date: 2026-06-21
 Status: Draft written, pending user review
-Skill name: `executing-amazon-ads-strategies`
+Skill name: `ads-creat`
 Workspace: `/Users/dongli/Documents/Skill`
 
 ## Objective
@@ -70,7 +70,7 @@ The skill should close that gap by standardizing how strategy conclusions become
 
 | Trigger case | Example |
 |---|---|
-| Explicit invocation | `$executing-amazon-ads-strategies` |
+| Explicit invocation | `$ads-creat` |
 | Upstream-to-downstream handoff | "Convert these Amazon ad strategy conclusions into executable tasks." |
 | Execution compilation request | "Generate SP/SB/SD ad task payloads from this strategy." |
 | Automation handoff | "Turn these ad optimization conclusions into machine-readable tasks." |
@@ -89,14 +89,14 @@ The skill should close that gap by standardizing how strategy conclusions become
 
 | Path | Role |
 |---|---|
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/SKILL.md` | Main skill instructions and routing rules. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/agents/openai.yaml` | UI metadata and default prompt. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/references/upstream-strategy-patterns.md` | Common upstream input patterns and recognition notes. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/references/action-mapping-rules.md` | Mapping from conclusions to action dictionary. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/references/task-payload-contract.md` | Fixed outer envelope and dynamic payload rules. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/references/mysql-task-table.md` | MySQL task table design and field semantics. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/scripts/validate_task_payload.py` | Validate payload structure and action-specific fields. |
-| `/Users/dongli/Documents/Skill/executing-amazon-ads-strategies/scripts/render_delivery_bundle.py` | Write final output artifacts to Downloads. |
+| `/Users/dongli/Documents/Skill/ads-creat/SKILL.md` | Main skill instructions and routing rules. |
+| `/Users/dongli/Documents/Skill/ads-creat/agents/openai.yaml` | UI metadata and default prompt. |
+| `/Users/dongli/Documents/Skill/ads-creat/references/upstream-strategy-patterns.md` | Common upstream input patterns and recognition notes. |
+| `/Users/dongli/Documents/Skill/ads-creat/references/action-mapping-rules.md` | Mapping from conclusions to action dictionary. |
+| `/Users/dongli/Documents/Skill/ads-creat/references/task-payload-contract.md` | Fixed outer envelope and dynamic payload rules. |
+| `/Users/dongli/Documents/Skill/ads-creat/references/mysql-task-table.md` | MySQL task table design and field semantics. |
+| `/Users/dongli/Documents/Skill/ads-creat/scripts/validate_task_payload.py` | Validate payload structure and action-specific fields. |
+| `/Users/dongli/Documents/Skill/ads-creat/scripts/render_delivery_bundle.py` | Write final output artifacts to Downloads. |
 
 ## Architecture
 
@@ -203,8 +203,8 @@ All final artifacts must be written to `/Users/dongli/Downloads`.
 
 | Artifact | Path pattern | Purpose |
 |---|---|---|
-| Skill source directory copy | `/Users/dongli/Downloads/executing-amazon-ads-strategies/` | User review and later installation. |
-| Skill archive | `/Users/dongli/Downloads/executing-amazon-ads-strategies.zip` | Easy transfer and backup. |
+| Skill source directory copy | `/Users/dongli/Downloads/ads-creat/` | User review and later installation. |
+| Skill archive | `/Users/dongli/Downloads/ads-creat.zip` | Easy transfer and backup. |
 | JSON task bundle | `/Users/dongli/Downloads/amazon-ads-task-bundle-<YYYYMMDD-HHMMSS>.json` | Primary machine-executable output. |
 | SQL task file | `/Users/dongli/Downloads/amazon-ads-task-bundle-<YYYYMMDD-HHMMSS>.sql` | MySQL ingestion output. |
 | Summary file | `/Users/dongli/Downloads/amazon-ads-task-summary-<YYYYMMDD-HHMMSS>.md` | Fast human verification. |
@@ -213,8 +213,8 @@ All final artifacts must be written to `/Users/dongli/Downloads`.
 
 | Artifact | Naming rule |
 |---|---|
-| Skill folder | `executing-amazon-ads-strategies` |
-| Skill zip | `executing-amazon-ads-strategies.zip` |
+| Skill folder | `ads-creat` |
+| Skill zip | `ads-creat.zip` |
 | JSON bundle | `amazon-ads-task-bundle-<timestamp>.json` |
 | SQL bundle | `amazon-ads-task-bundle-<timestamp>.sql` |
 | Summary | `amazon-ads-task-summary-<timestamp>.md` |
