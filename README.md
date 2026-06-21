@@ -1,5 +1,7 @@
 # ads-creat
 
+[中文说明](./README.zh-CN.md)
+
 `ads-creat` is a Codex skill for turning upstream Amazon Ads strategy conclusions into stable, machine-executable execution tasks.
 
 This repository is designed primarily for AI agents, not for marketing copy.
